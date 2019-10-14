@@ -4,7 +4,6 @@ import com.jeff.springboot.demo.dao.user.UserMapper;
 import com.jeff.springboot.demo.entity.User;
 import com.jeff.springboot.demo.service.user.UserService;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;

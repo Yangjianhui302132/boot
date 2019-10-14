@@ -1,5 +1,7 @@
 server:
   port: 80
+  servlet:
+    context-path: /demo
 
 spring:
   datasource:
@@ -8,7 +10,8 @@ spring:
     password: Jeff302132
     driver-class-name: com.mysql.jdbc.Driver
 
-user:
-  jeff:
-    age: 18
-    name: 杨剑辉
+mybatis:
+  mapper-locations: classpath:mapper/*/*Mapper.xml
+  type-aliases-package: com.jeff.springbot.demo.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

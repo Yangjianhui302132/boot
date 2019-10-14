@@ -3,7 +3,7 @@
 <mapper namespace="com.jeff.springboot.demo.dao.user.UserMapper" >
   <resultMap id="BaseResultMap" type="com.jeff.springboot.demo.entity.User">
     <result column="id" jdbcType="INTEGER" property="id" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="user_name" jdbcType="VARCHAR" property="name" />
     <result column="age" jdbcType="INTEGER" property="age" />
   </resultMap>
   <select id="selectByPrimaryKey" resultType="com.jeff.springboot.demo.entity.User">
@@ -16,6 +16,6 @@
 
     <insert id="insertSelective" parameterType="com.jeff.springboot.demo.entity.User"
             useGeneratedKeys="true" keyColumn="id" keyProperty="id">
-        insert into user(name,age) values(#{name},#{age})
+        insert into user(user_name,age) values(#{name},#{age})
     </insert>
 </mapper>
